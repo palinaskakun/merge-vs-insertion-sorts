@@ -84,7 +84,7 @@ def generate_data(input_sizes):
             insertion_time = measure_time(insertion_sort, arr)
             insertion_times.append(insertion_time)
 
-        # Average times over 20 trials
+        # Average times over 30 trials
         avg_merge_time = sum(merge_times) / len(merge_times)
         avg_insertion_time = sum(insertion_times) / len(insertion_times)
 
@@ -108,6 +108,7 @@ def plot_results(input_sizes, merge_sort_times, insertion_sort_times):
     plt.show()
 
 # Experiment setup
+# input_sizes = [10, 100, 500, 1000, 2000, 5000, 10000]
 input_sizes = list(range(60, 70))
 merge_sort_times, insertion_sort_times = generate_data(input_sizes)
 
